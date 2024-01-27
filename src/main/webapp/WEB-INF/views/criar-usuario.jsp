@@ -10,6 +10,9 @@
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
 	rel="stylesheet">
+
+<link href="resources/style.css" rel="stylesheet" />
+
 </head>
 <body class="bg-secondary">
 	<div class="row">
@@ -25,28 +28,36 @@
 					</div>
 
 					<div class="text-center text-success">
-						<strong>${mensagem_sucesso}</strong>
+						<h3>${mensagem_sucesso}</h3>
 					</div>
 					<div class="text-center text-danger">
-						<strong>${mensagem_erro}</strong>
+						<h3>${mensagem_erro}</h3>
 					</div>
 
-					<form method="post" action="criar-usuario-post">
+					<form id="formCriarUsuario" method="post"
+						action="criar-usuario-post">
 						<div class="mb-2">
 							<label>Nome do usuário:</label> <input type="text"
-								class="form-control" name="nome"
+								class="form-control" id="name" name="nome"
 								placeholder="Digite seu nome aqui." />
 						</div>
 						<div class="mb-2">
 							<label>Email de acesso:</label> <input type="text"
-								class="form-control" name="email"
+								class="form-control" id="email" name="email"
 								placeholder="Digite seu email aqui." />
 						</div>
 						<div class="mb-2">
 							<label>Senha de acesso:</label> <input type="password"
-								class="form-control" name="senha"
+								class="form-control" id="senha" name="senha"
 								placeholder="Digite sua senha aqui." />
 						</div>
+
+						<div class="mb-2">
+							<label>Confirme a sua senha:</label> <input type="password"
+								class="form-control" id="senhaConfirmacao"
+								name="senhaConfirmacao" placeholder="Confirme sua senha aqui." />
+						</div>
+
 						<div class="mb-2 d-grid">
 							<input type="submit" class="btn btn-primary"
 								value="Realizar Cadastro" />
@@ -63,5 +74,17 @@
 	<!-- Referência do arquivo JS do bootstrap -->
 	<script
 		src="https://cdn.jsdelivr.net /npm/bootstrap@5.3.2/dist/js/bootstrap .bundle.min.js"></script>
+	<!-- JQuery JS -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<!-- JQuery Validate JS -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_pt_BR.min.js"></script>
+
+	<script src="resources/js/criar-usuario.js"></script>
+
 </body>
 </html>
