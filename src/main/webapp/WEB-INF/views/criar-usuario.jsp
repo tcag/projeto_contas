@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -84,7 +83,7 @@
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_pt_BR.min.js"></script>
 
-	<script src="resources/js/criar-usuario.js"></script>
+	<script src="resources/js/criar-usuario.js" charset=UTF-8></script>
 
 </body>
 </html>
