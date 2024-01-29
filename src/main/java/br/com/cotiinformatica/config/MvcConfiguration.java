@@ -14,28 +14,31 @@ import br.com.cotiinformatica.interceptors.AdminAccessInterceptor;
 import br.com.cotiinformatica.interceptors.CacheControlInterceptor;
 
 @Configuration
-@ComponentScan(basePackages = "br.com.cotiinformatica")
+@ComponentScan(basePackages="br.com.cotiinformatica")
 @EnableWebMvc
-public class MvcConfiguration extends WebMvcConfigurerAdapter {
+public class MvcConfiguration extends WebMvcConfigurerAdapter{
 
 	@Bean
-	public ViewResolver getViewResolver() {
+	public ViewResolver getViewResolver(){
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".jsp");
 		return resolver;
 	}
-
+	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
 
+	/*
+	 * Método para registrar todos os interceptadores do projeto
+	 */
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		// adicionando os interceptadores
+		//adicionando os interceptadores
 		registry.addInterceptor(new AdminAccessInterceptor());
 		registry.addInterceptor(new CacheControlInterceptor());
 	}
-
+	
 }

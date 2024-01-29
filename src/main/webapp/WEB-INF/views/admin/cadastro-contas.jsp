@@ -17,12 +17,7 @@
 <body>
 	<!-- menu navbar -->
 	<jsp:include page="/WEB-INF/views/admin/components/navbar.jsp"></jsp:include>
-	<div class="container mt-3">
-		<h4>Cadastro de Contas</h4>
-		<p>Preencha os campos abaixo para incluir uma conta a pagar ou
-			receber.</p>
-		<hr />
-
+	
 		<div class="container mt-3">
 			<h4>Cadastro de Contas</h4>
 			<p>Preencha os campos abaixo para incluir uma conta a pagar ou receber.</p>
@@ -85,7 +80,6 @@
 		</div>
 </div>
 		<!-- Referência do arquivo JS do bootstrap -->
-		<script type="text/javascript" charset=UTF-8></script>
 		<script
 			src="https://cdn.jsdelivr.net /npm/bootstrap@5.3.2/dist/js/bootstrap .bundle.min.js"></script>
 		<!-- JQuery JS -->
